@@ -1,7 +1,8 @@
 <p>liste works!</p>
 <ul>
-  <li *ngFor="let a of liste">
-    {{a.produit.titre}} - {{a.produit.prix}} - {{a.quantite}} <button>Ajouter au panier</button>
+  <li *ngFor="let a of liste; let i = index">
+    {{a.produit.titre}} - {{a.produit.prix}} - {{a.quantite}}
+    <button (click)="ajoutPanier(i)" [disabled]="a.quantite < 1">Ajouter au panier</button>
   </li>
 </ul>
 <app-detail></app-detail>

@@ -1,1 +1,9 @@
 <p>panier works!</p>
+<div *ngIf="panier">
+  <h4>Total : {{total | currency : 'EUR'}}</h4>
+  <ul>
+    <li *ngFor="let a of panier">
+      {{a.produit.titre}} - {{a.quantite}}
+    </li>
+  </ul>
+</div>

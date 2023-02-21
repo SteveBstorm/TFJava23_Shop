@@ -1,3 +1,4 @@
+import { PanierComponent } from './pages/panier/panier.component';
 import { AddproductComponent } from './pages/admin/components/addproduct/addproduct.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -9,7 +10,8 @@ import { DetailComponent } from './core/components/detail/detail.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PanierComponent
   ],
   imports: [
     BrowserModule,

@@ -15,4 +15,13 @@ export class MagasinService {
     ]
   }
   constructor() { }
+
+  ajoutQty() {}
+
+  reduireQty(index : number){
+    if(this.monMagasin.stock[index].quantite > 0) {
+      this.monMagasin.stock[index].quantite--
+
+    }
+  }
 }
