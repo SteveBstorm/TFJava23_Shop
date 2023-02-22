@@ -1,3 +1,7 @@
-<h4>Detail de {{article.titre}}</h4>
+<div *ngIf="article">
+  <h4>Detail de {{article.titre}}</h4>
 <p>Description : {{article.description}}</p>
 <p>Prix : {{article.prix}}</p>
+
+</div>
+{{index}}

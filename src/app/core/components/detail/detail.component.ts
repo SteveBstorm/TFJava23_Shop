@@ -1,5 +1,6 @@
+import { MagasinService } from './../../../services/magasin.service';
 import { Produit } from './../../models/produit.model';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail',
@@ -8,5 +9,15 @@ import { Component } from '@angular/core';
 })
 export class DetailComponent {
 
+  @Input() set index(value : number) {
+    this.article = this.$magasinService.monMagasin.stock[value].produit
+  }
   article! : Produit
+
+  constructor(private $magasinService : MagasinService){}
+
+  ngOnInit(){
+    console.log("init")
+
+  }
 }

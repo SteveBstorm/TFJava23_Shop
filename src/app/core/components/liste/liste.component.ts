@@ -13,6 +13,8 @@ import { Component } from '@angular/core';
 export class ListeComponent {
 
   liste! : Stock[]
+  selectedIndex! : number
+
   constructor(
     private $productService : ProductService,
     private $magasinService : MagasinService,
@@ -34,5 +36,9 @@ export class ListeComponent {
       this.$magasinService.reduireQty(index)
       this.$panierService.ajouterProduit(this.liste[index].produit)
     }
+  }
+
+  showDetail(index :number){
+    this.selectedIndex = index
   }
 }
