@@ -2,3 +2,12 @@
 
 <p>Etat : {{etat}}</p>
 <button (click)="switch()">switch</button>
+
+<ul>
+  <li *ngFor="let s of listeAfficher">
+    {{s}}
+  </li>
+</ul>
+
+<hr />
+<app-children info="Cuillère" [truc]='liste' (envoiEvent)="receptionDeEnfant($event)"></app-children>

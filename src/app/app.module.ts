@@ -7,11 +7,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ListeComponent } from './core/components/liste/liste.component';
 import { DetailComponent } from './core/components/detail/detail.component';
+import { HeaderComponent } from './core/components/header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PanierComponent
+    PanierComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

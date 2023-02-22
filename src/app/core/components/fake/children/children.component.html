@@ -1,0 +1,7 @@
+<p>children works!</p>
+<p>mon Info : {{info}}</p>
+<ul>
+  <li *ngFor="let t of truc">
+    {{t}} <button (click)="envoi(t)">Envoyer au parent</button>
+  </li>
+</ul>

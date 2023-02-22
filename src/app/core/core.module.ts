@@ -3,6 +3,8 @@ import { ListeComponent } from './components/liste/liste.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FakeComponent } from './components/fake/fake.component';
+import { ChildrenComponent } from './components/fake/children/children.component';
+
 
 
 
@@ -10,7 +12,9 @@ import { FakeComponent } from './components/fake/fake.component';
   declarations: [
     ListeComponent,
     DetailComponent,
-    FakeComponent
+    FakeComponent,
+    ChildrenComponent
+
   ],
   imports: [
     CommonModule
