@@ -4,7 +4,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {path : '', component : AdminComponent, pathMatch : 'full'}
+  {path : '', component : AdminComponent, children : [
+    {path : 'create', component : AddproductComponent}
+
+  ]},
 ];
 
 @NgModule({
