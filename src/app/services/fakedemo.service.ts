@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, map, Observable, of, Subject, tap } from 'rxjs';
+import { environment } from 'src/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +12,13 @@ export class FakedemoService {
 
   etatSubject : Subject<boolean> = new Subject<boolean>()
 
-  constructor() { }
+  private url : string = environment.url
+  constructor(
+    private $client : HttpClient
+  ) { }
+
+
+
   switchEtat() {
     this.etat = !this.etat
     this.etatSubject.next(this.etat)

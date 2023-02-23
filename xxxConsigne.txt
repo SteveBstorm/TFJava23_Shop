@@ -1,0 +1,7 @@
+Mettre en place la persistance de données dans l'application au travers de Json-server
+
+- Chaque article doit être stocké dans le magasin avec son stock actuel
+- Quand un article est ajouter au panier, réduire la quantité PARTOUT
+
+Pour Hadi : Gérer la validation du panier, ne décompter du stock que si la commande est validée
+Pour Julien : Bonne sieste

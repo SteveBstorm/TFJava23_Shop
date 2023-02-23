@@ -9,9 +9,14 @@ import { FakedemoService } from 'src/app/services/fakedemo.service';
 })
 export class FakeComponent {
   etat! : boolean
+  isVisible! : boolean
   constructor(private $service : FakedemoService) {}
   // liste : Observable<string[]> = of(["salut", "coucou", "bonjour"])
   listeAfficher : string[] = []
+
+  switchVisible() {
+    this.isVisible = !this.isVisible
+  }
   ngOnInit() {
 
     // this.liste.pipe(

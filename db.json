@@ -1,0 +1,19 @@
+{
+  "jeux": [
+    {
+      "id": 1,
+      "titre": "Tears of kingdom",
+      "annee": 2023
+    },
+    {
+      "id": 2,
+      "titre": "Breath of the wild",
+      "annee": 2017
+    },
+    {
+      "titre": "Ocharina of time",
+      "annee": 2000,
+      "id": 4
+    }
+  ]
+}

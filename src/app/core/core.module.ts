@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FakeComponent } from './components/fake/fake.component';
 import { ChildrenComponent } from './components/fake/children/children.component';
+import { JeuComponent } from './components/fake/jeu/jeu.component';
 
 
 
@@ -12,8 +13,9 @@ import { ChildrenComponent } from './components/fake/children/children.component
   declarations: [
     ListeComponent,
     DetailComponent,
-    FakeComponent,
-    ChildrenComponent
+    // FakeComponent,
+    //ChildrenComponent,
+    JeuComponent
 
   ],
   imports: [

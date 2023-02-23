@@ -9,15 +9,22 @@ import { ListeComponent } from './core/components/liste/liste.component';
 import { DetailComponent } from './core/components/detail/detail.component';
 import { HeaderComponent } from './core/components/header/header.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FakeComponent } from './core/components/fake/fake.component';
+import { ChildrenComponent } from './core/components/fake/children/children.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     PanierComponent,
-    HeaderComponent
+    HeaderComponent,
+    FakeComponent,
+    ChildrenComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,31 @@
-<form></form>
+<form [formGroup]="fg" (ngSubmit)="addProduct()">
+  <p>
+    Titre :
+    <input type="text" formControlName="titre">
+  </p>
+  <p *ngIf="fg.controls['titre'].invalid" style="color:red;">
+    Le titre doit faire au moins 2 caractères
+  </p>
+  <p>
+    Description :
+    <input type="text" formControlName="desc">
+  </p>
+  <p *ngIf="fg.controls['desc'].invalid && fg.controls['desc'].touched" style="color:red;">
+    Déscription obligatoire
+  </p>
+  <p>
+    Prix :
+    <input type="number" formControlName="prix">
+  </p>
+  <p *ngIf="fg.controls['prix'].invalid" style="color:red;">
+    Le prix ne peut être négatif
+  </p>
+  <p>
+    Quantité :
+    <input type="number" formControlName="qty">
+  </p>
+  <button type="submit" [disabled]="fg.invalid">Valider</button>
+</form>
 <h4>Consignes</h4>
 <ul>
   <li>prix > 0</li>

@@ -1,5 +1,6 @@
 <p>fake works!</p>
-
+<a (click)="switchVisible()">Afficher +</a> | <a routerLink="jeux">Jeux</a>
+<div *ngIf="isVisible">
 <p>Etat : {{etat}}</p>
 <button (click)="switch()">switch</button>
 
@@ -11,3 +12,7 @@
 
 <hr />
 <app-children info="Cuillère" [truc]='liste' (envoiEvent)="receptionDeEnfant($event)"></app-children>
+</div>
+
+<router-outlet></router-outlet>
+

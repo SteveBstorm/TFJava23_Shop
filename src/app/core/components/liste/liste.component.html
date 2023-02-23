@@ -5,4 +5,4 @@
     <button (click)="ajoutPanier(i)" [disabled]="a.quantite < 1">Ajouter au panier</button>
   </li>
 </ul>
-<app-detail [index]="selectedIndex"></app-detail>
+<app-detail [index]="selectedIndex" *ngIf="selectedIndex > -1"></app-detail>

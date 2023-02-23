@@ -1,0 +1,9 @@
+<p>jeu works!</p>
+<ul>
+  <li *ngFor="let j of jeux">
+    {{j.titre}} <button *ngIf="j.id" (click)="delete(j.id)">X</button>
+  </li>
+</ul>
+
+<button (click)="create()">Ajouter</button>
+<button (click)="update()">Update</button>

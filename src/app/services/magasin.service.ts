@@ -1,5 +1,6 @@
 import { Magasin } from './../core/models/magasin.model';
 import { Injectable } from '@angular/core';
+import { Stock } from '../core/models/stock.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +24,9 @@ export class MagasinService {
       this.monMagasin.stock[index].quantite--
 
     }
+  }
+
+  ajoutProduit(newStock : Stock) {
+    this.monMagasin.stock.push(newStock)
   }
 }
