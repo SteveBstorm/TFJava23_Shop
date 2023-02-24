@@ -1,3 +1,4 @@
+import { TokenInterceptor } from './interceptor/token.interceptor';
 import { FourofourComponent } from './core/components/fourofour/fourofour.component';
 import { FormsModule } from '@angular/forms';
 import { PanierComponent } from './pages/panier/panier.component';
@@ -11,7 +12,7 @@ import { ListeComponent } from './core/components/liste/liste.component';
 import { DetailComponent } from './core/components/detail/detail.component';
 import { HeaderComponent } from './core/components/header/header.component';
 
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FakeComponent } from './core/components/fake/fake.component';
 import { ChildrenComponent } from './core/components/fake/children/children.component';
 import { LoginComponent } from './core/components/login/login.component';
@@ -36,7 +37,9 @@ import { DetailjeuComponent } from './core/components/fake/detailjeu/detailjeu.c
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [{
+    provide : HTTP_INTERCEPTORS, useClass : TokenInterceptor, multi : true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

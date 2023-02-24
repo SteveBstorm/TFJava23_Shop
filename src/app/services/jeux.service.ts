@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Observable, of } from 'rxjs';
 import { environment } from 'src/environment';
@@ -18,7 +18,9 @@ export class JeuxService {
   }
 
   create(jeu : Jeux) :Observable<void> {
-    return this.$client.post<void>(this.url+"/jeux", jeu)
+    // let token = "aezmrljfldkjazerlkj"
+    // let myHeader : HttpHeaders = new HttpHeaders().set('authorization' , 'bearer '+token)
+    return this.$client.post<void>(this.url+"/jeux", jeu/*, {headers : myHeader}*/)
   }
 
   delete(id : number) : Observable<void> {
