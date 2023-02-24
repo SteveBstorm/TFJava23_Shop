@@ -1,5 +1,6 @@
 <a routerLink="/fake">Demo Observable</a> |
-<a routerLink="/admin">Admin</a> |
+<a *ngIf="user.role =='admin' " routerLink="/admin">Admin</a> |
 <a routerLink="/client">Client</a> |
 <a routerLink="/panier">Panier</a> ({{nbr}}) - Total : {{total | currency : 'EUR'}}
-etat : {{etat}}
+
+<app-login></app-login>

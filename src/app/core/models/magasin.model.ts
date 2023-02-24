@@ -4,4 +4,5 @@ export interface Magasin {
   nom : string
   position : string
   stock : Stock[]
+  stockIds? : any[]
 }

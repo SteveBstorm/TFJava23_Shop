@@ -13,12 +13,15 @@ export class HeaderComponent {
   nbr : number = 0
 
   etat! : boolean
-
+  get user() : any {
+    return JSON.parse(localStorage.getItem("userInfo") ?? "")
+  }
   constructor(
     private $panierService : PanierService,
     private $fakeservice: FakedemoService){}
 
   ngOnInit() {
+
     this.$panierService.totalSubject.subscribe({
       next : (data : number) => {
         this.total = data

@@ -1,3 +1,5 @@
+import { FourofourComponent } from './core/components/fourofour/fourofour.component';
+import { FormsModule } from '@angular/forms';
 import { PanierComponent } from './pages/panier/panier.component';
 import { AddproductComponent } from './pages/admin/components/addproduct/addproduct.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +14,9 @@ import { HeaderComponent } from './core/components/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FakeComponent } from './core/components/fake/fake.component';
 import { ChildrenComponent } from './core/components/fake/children/children.component';
+import { LoginComponent } from './core/components/login/login.component';
+import { JeuComponent } from './core/components/fake/jeu/jeu.component';
+import { DetailjeuComponent } from './core/components/fake/detailjeu/detailjeu.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +24,17 @@ import { ChildrenComponent } from './core/components/fake/children/children.comp
     PanierComponent,
     HeaderComponent,
     FakeComponent,
-    ChildrenComponent
+    ChildrenComponent,
+    LoginComponent,
+    JeuComponent,
+    DetailjeuComponent,
+    FourofourComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

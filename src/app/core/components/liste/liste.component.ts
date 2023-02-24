@@ -1,3 +1,4 @@
+import { Magasin } from './../../models/magasin.model';
 import { PanierService } from './../../../services/panier.service';
 import { MagasinService } from './../../../services/magasin.service';
 import { Stock } from './../../models/stock.model';
@@ -24,21 +25,26 @@ export class ListeComponent {
   }
 
   ngOnInit() {
-    console.log(this.liste);
+   this.loadItems()
 
-    this.liste = this.$productService.listeProduit
-    console.log(this.liste);
+  }
+
+  loadItems(){
+    this.$magasinService.getMagasin().subscribe((data : Magasin) => {
+      this.liste = data.stock
+    })
+   //this.liste = this.$productService.listeProduit
   }
 
   ajoutPanier(index : number) : void{
     if(this.liste[index].quantite > 0)
     {
-      this.$magasinService.reduireQty(index)
+      this.$magasinService.reduireQty(this.liste[index])?.subscribe(() => this.loadItems())
       this.$panierService.ajouterProduit(this.liste[index].produit)
     }
   }
 
-  showDetail(index :number){
-    this.selectedIndex = index
+  showDetail(id :number){
+    this.selectedIndex = id
   }
 }

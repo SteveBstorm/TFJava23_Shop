@@ -1,8 +1,8 @@
 <p>liste works!</p>
 <ul>
   <li *ngFor="let a of liste; let i = index">
-    <a (click)="showDetail(i)">{{a.produit.titre}}</a> - {{a.produit.prix}} - {{a.quantite}}
+    <a (click)="showDetail(a.id ?? 0)">{{a.produit.titre}}</a> - {{a.produit.prix}} - {{a.quantite}}
     <button (click)="ajoutPanier(i)" [disabled]="a.quantite < 1">Ajouter au panier</button>
   </li>
 </ul>
-<app-detail [index]="selectedIndex" *ngIf="selectedIndex > -1"></app-detail>
+<app-detail [id]="selectedIndex" *ngIf="selectedIndex > -1"></app-detail>

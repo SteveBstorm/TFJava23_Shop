@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Jeux, JeuxService } from 'src/app/services/jeux.service';
 
 @Component({
@@ -9,11 +10,18 @@ import { Jeux, JeuxService } from 'src/app/services/jeux.service';
 export class JeuComponent {
 
   jeux! : Jeux[]
-  constructor(private $service : JeuxService){
+  constructor(
+    private $service : JeuxService,
+    private $router : Router
+    ){
   }
 
   ngOnInit(){
     this.loadItems()
+  }
+
+  showDetail(id : number) {
+    this.$router.navigate(['fake/detailjeu', id])
   }
 
   loadItems() {

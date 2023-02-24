@@ -1,7 +1,9 @@
 <p>jeu works!</p>
 <ul>
   <li *ngFor="let j of jeux">
-    {{j.titre}} <button *ngIf="j.id" (click)="delete(j.id)">X</button>
+    <a [routerLink]="['../detailjeu', j.id]">{{j.titre}}</a>
+    <button *ngIf="j.id" (click)="delete(j.id)">X</button>
+    <button *ngIf="j.id" (click)="showDetail(j.id)">Detail</button>
   </li>
 </ul>
 

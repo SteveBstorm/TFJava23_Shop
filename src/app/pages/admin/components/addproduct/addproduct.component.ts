@@ -32,15 +32,19 @@ export class AddproductComponent {
   addProduct() {
     let newProduct : Stock = {
       quantite : this.fg.value["qty"],
+      magasinId : 1,
       produit : {
         titre : this.fg.value["titre"],
         prix : this.fg.value["prix"],
         description : this.fg.value["desc"]
+
       }
     }
 
-    this.$magasinService.ajoutProduit(newProduct)
-    alert("Article Enregistré")
-    this.initForm()
+    this.$magasinService.ajoutProduit(newProduct).subscribe(() => {
+      alert("Article Enregistré")
+      this.initForm()
+    } )
+
   }
 }

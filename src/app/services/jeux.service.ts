@@ -28,6 +28,10 @@ export class JeuxService {
   update(id : number, jeu : Jeux) : Observable<void> {
     return this.$client.put<void>(this.url+"/jeux/"+id, jeu)
   }
+
+  getById(id : number) : Observable<Jeux> {
+    return this.$client.get<Jeux>(this.url+"/jeux/"+id)
+  }
 }
 
 export interface Jeux {

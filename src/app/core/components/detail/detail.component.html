@@ -1,7 +1,7 @@
 <div *ngIf="article">
-  <h4>Detail de {{article.titre}}</h4>
-<p>Description : {{article.description}}</p>
-<p>Prix : {{article.prix}}</p>
-
+  <h4>Detail de {{article.produit.titre}}</h4>
+<p>Description : {{article.produit.description}}</p>
+<p>Prix : {{article.produit.prix}}</p>
+<p>Quantité en stock : {{article.quantite}}</p>
 </div>
-{{index}}
+

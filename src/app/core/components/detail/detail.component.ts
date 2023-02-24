@@ -1,6 +1,7 @@
 import { MagasinService } from './../../../services/magasin.service';
 import { Produit } from './../../models/produit.model';
 import { Component, Input } from '@angular/core';
+import { Stock } from '../../models/stock.model';
 
 @Component({
   selector: 'app-detail',
@@ -9,10 +10,10 @@ import { Component, Input } from '@angular/core';
 })
 export class DetailComponent {
 
-  @Input() set index(value : number) {
-    this.article = this.$magasinService.monMagasin.stock[value].produit
+  @Input() set id(value : number) {
+    this.$magasinService.getProductById(value).subscribe((p : Stock) => this.article = p)
   }
-  article! : Produit
+  article! : Stock
 
   constructor(private $magasinService : MagasinService){}
 

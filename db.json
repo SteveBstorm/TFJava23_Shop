@@ -15,5 +15,60 @@
       "annee": 2000,
       "id": 4
     }
+  ],
+  "magasin": [
+    {
+      "id": 1,
+      "nom": "Touta10balle",
+      "position": "Chez moi"
+    }
+  ],
+  "stock": [
+    {
+      "id": 1,
+      "produit": {
+        "titre": "Coca",
+        "description": "Trop sucré",
+        "prix": 2.1,
+        "id": 1
+      },
+      "quantite": 9,
+      "magasinId": 1
+    },
+    {
+      "id": 2,
+      "produit": {
+        "titre": "Iphone",
+        "description": "Trop cher",
+        "prix": 1232.1,
+        "id": 2
+      },
+      "quantite": 2,
+      "magasinId": 1
+    },
+    {
+      "quantite": 0,
+      "magasinId": 1,
+      "produit": {
+        "titre": "truc",
+        "prix": 2,
+        "description": "poira"
+      },
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "login": "admin",
+      "password": "test1234",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "login": "pasAdmin",
+      "password": "test1234",
+      "role": "user"
+    }
   ]
 }
